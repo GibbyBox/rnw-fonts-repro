@@ -1,10 +1,10 @@
 import { Button, Paragraph, YStack } from '@my/ui'
 import { ChevronLeft } from '@tamagui/lucide-icons'
-import { useParams, useRouter } from 'solito/navigation'
+import { useRouter, useLocalSearchParams } from 'expo-router'
 
 export function UserDetailScreen() {
   const router = useRouter()
-  const { id } = useParams()
+  const { id } = useLocalSearchParams()
 
   return (
     <YStack f={1} jc="center" ai="center" gap="$4" bg="$background">

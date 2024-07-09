@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
 import { Provider } from 'app/provider'
 import { NativeToast } from '@my/ui/src/NativeToast'
+import { MyFonts } from '@my/config'
 
 export const unstable_settings = {
   // Ensure that reloading on `/user` keeps a back button present.
@@ -16,6 +17,7 @@ SplashScreen.preventAutoHideAsync()
 
 export default function App() {
   const [interLoaded, interError] = useFonts({
+    ...MyFonts,
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
   })

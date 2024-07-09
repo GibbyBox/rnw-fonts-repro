@@ -1,4 +1,4 @@
-import { createTamagui } from 'tamagui'
+import { createTamagui, createFont } from 'tamagui'
 import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
 import { tokens, themes } from '@tamagui/config/v3'
@@ -38,17 +38,24 @@ const headingFont = createInterFont({
   },
 })
 
-const bodyFont = createInterFont(
-  {
-    face: {
-      700: { normal: 'InterBold' },
-    },
+const bodyFont = createFont({
+  family: 'TwinkleStar',
+  face: {
+    100: { normal: 'TwinkleStar' },
+    200: { normal: 'TwinkleStar' },
+    300: { normal: 'TwinkleStar' },
+    400: { normal: 'TwinkleStar' },
+    500: { normal: 'TwinkleStar' },
+    600: { normal: 'TwinkleStar' },
+    700: { normal: 'TwinkleStar' },
+    800: { normal: 'TwinkleStar' },
+    900: { normal: 'TwinkleStar' },
   },
-  {
-    sizeSize: (size) => Math.round(size * 1.1),
-    sizeLineHeight: (size) => Math.round(size * 1.1 + (size > 20 ? 10 : 10)),
-  }
-)
+  size: {
+    6: 15,
+    7: 16,
+  },
+})
 
 export const config = createTamagui({
   defaultFont: 'body',
